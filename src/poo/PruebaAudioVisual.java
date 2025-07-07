@@ -1,3 +1,4 @@
+// ------ PruebaAudioVisual.java ------
 package poo;
 
 import uni1a.*;
@@ -18,9 +19,25 @@ public class PruebaAudioVisual {
         Documental doc = new Documental("Cosmos", 45, "Ciencia", "Astronomía");
         doc.agregarInvestigador(new Investigador("Carl Sagan", "Astrofísico"));
 
-        // Mostrar detalles de cada contenido
-        ContenidoAudiovisual[] contenidos = { peli, serie, doc };
-        for (ContenidoAudiovisual c : contenidos) {
+        // Tráiler de película
+        Trailer trailer = new Trailer(
+            "Avatar - Tráiler Oficial", 
+            3, "Acción", 
+            "Avatar", 
+            0.15f  // Muestra el 15% del contenido original
+        );
+
+        // Clip musical
+        ClipMusical clip = new ClipMusical(
+            "Bohemian Rhapsody", 
+            6, "Rock", 
+            "Queen", 
+            354  // 5 minutos 54 segundos = 354 segundos
+        );
+
+        // Mostrar todos los contenidos
+        ContenidoAudiovisual[] lista = { peli, serie, doc, trailer, clip };
+        for (ContenidoAudiovisual c : lista) {
             c.mostrarDetalles();
         }
     }
